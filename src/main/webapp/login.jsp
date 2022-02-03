@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language ="java" %>
 <html>
@@ -6,7 +5,7 @@
     <title>Login Form</title>
 </head>
 <body>
-<form method="POST">
+<form method="POST"  ACTION="login.jsp">
 
     <label for="username">Username</label>
     <input id="username" name="username" type="text">
@@ -15,11 +14,11 @@
     <label for="password">Password</label>
     <input id="password" name="password" type="password">
     <br>
-
     <input type="submit">
 </form>
 <c:choose>
     <c:when test="${param.username == 'admin' && param.password == 'password'}"/>
+        <c:redirect url = "/profile.jsp"/>
 </c:choose>
 
 </body>
