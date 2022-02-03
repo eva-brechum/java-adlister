@@ -23,3 +23,13 @@ public class CountServlet extends HttpServlet {
         out.println("<h2 align = \"center\">" + count + "<h2>\n");
     }
 }
+
+//Walkthrough solution bonus
+//String reset = request.getParameter("reset");
+//if(reset == null){
+//        out.println("<h2 align = \"center\">" + count + "<h2>\n");
+//        }else{
+//        count=0;
+//        out.println("<h2 align = \"center\">" + count + "<h2>\n")
+//        }
+//        }
