@@ -13,8 +13,9 @@ public class PizzaOrderServlet extends HttpServlet {
        String size = request.getParameter("size");
         request.getRequestDispatcher("/pizza-order.jsp").forward(request, response);
         }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.sendRedirect("/PizzaOrderServlet");
     }
+
+
 }

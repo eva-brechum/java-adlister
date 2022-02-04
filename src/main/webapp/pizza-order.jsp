@@ -12,16 +12,14 @@
 </head>
 <body>
 <form method="POST" action="/pizza-order.jsp">
-
-    <%--@declare id="crust"--%><label for="crust">Crust</label>
-    <input type="text" name="crust" type="text">
-
-    <br>
-
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-    <br>
-
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Menu</option>
+        <option value="1">Crust Type</option>
+        <option value="2">Sauce</option>
+        <option value="3">Size</option>
+    </select>
+    <input id = "name" name>
+    <inout type = "phone num" name="phone number"/>
     <input type="submit">
 </form>
 </body>
