@@ -11,10 +11,10 @@
     <title>Pick Color</title>
 </head>
 <body>
-<form method="POST" action="/pickcolor.jsp">
+<form method="POST" action="/pick-color">
    <label for="color">Color:</label>
     <input type ="text" id="color" name="color">
-    <input type ="submit" value="Submit">
+    <button>Submit</button>
 </form>
 </body>
 </html>
