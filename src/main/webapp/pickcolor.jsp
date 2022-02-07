@@ -11,6 +11,7 @@
     <title>Pick Color</title>
 </head>
 <body>
+<h1>Pick a color </h1>
 <form method="POST" action="/pick-color">
    <label for="color">Color:</label>
     <input type ="text" id="color" name="color">
