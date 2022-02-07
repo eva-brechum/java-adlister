@@ -10,7 +10,6 @@
     <button name="guess" value="1">1</button>
     <button name="guess" value="2">2</button>
     <button name="guess" value="3">3</button>
-    <input type="text" name="guess">
 </form>
 </body>
 </html>
