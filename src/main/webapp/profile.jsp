@@ -6,15 +6,13 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
-<%
-    session.setAttribute("user", true);
-%>
+
 <body>
-<c:if test="${user}">
+<%--<c:if test="${user}">--%>
 
-</c:if>
+<%--</c:if>--%>
     <jsp:include page="partials/navbar.jsp" />
-
+    <h1>Welcome "${user}"</h1>
     <div class="container">
         <h1>Viewing your profile.</h1>
     </div>
