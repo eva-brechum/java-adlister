@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -5,7 +6,13 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
+<%
+    session.setAttribute("user", true);
+%>
 <body>
+<c:if test="${user}">
+
+</c:if>
     <jsp:include page="partials/navbar.jsp" />
 
     <div class="container">
