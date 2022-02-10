@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads{
@@ -11,6 +12,8 @@ public class MySQLAdsDao implements Ads{
             config.getUser(),
             config.getPassword()
     );
+
+    Statement stat = connection.createStatement();
 
     public MySQLAdsDao() throws SQLException {
     }
