@@ -11,7 +11,7 @@
     <title>User Registration Form</title>
 </head>
 <body>
-
+    <h1>Create User Registration</h1>
     <form method="POST" action="/register.jsp">
 
         <label for="username">UserName</label>
