@@ -55,15 +55,4 @@ public class MySQLUsersDao implements Users {
                 " " + user.getEmail() + " ' " +
                 user.getPassword() + ")";
     }
-
-    PreparedStatement stmt = null
-
-
-//    private User extractUser(ResultSet rs) throws SQLException {
-//            stmt.executeupdate(insertQuery,Statement, RETURN_GENERATED_KEYS);
-//            ResultSet rs = stmt.getGeneratedKeys();
-//            rs.next();
-//            return rs.getLong(1);
-//        }catch(SQLException e) {
-//            throw new RuntimeException("Creating new user leads to error", e);
-        }
+}

@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>User Registeration</title>
+    <title>User Registration Form</title>
 </head>
 <body>
+
     <form method="POST" action="/register.jsp">
 
         <label for="username">UserName</label>
