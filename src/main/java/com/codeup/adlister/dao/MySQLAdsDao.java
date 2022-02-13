@@ -41,7 +41,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String sql = "INSERT INTO users(username, email,password ) VALUES(admin, , ?)";
+            String sql = "INSERT INTO ads(user_id, title, description ) VALUES(?,?, ?)";
             PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
@@ -81,5 +81,21 @@ public class MySQLAdsDao implements Ads {
             ads.add(extractAd(rs));
         }
         return ads;
+    }
+
+    public List<Ad> searchAdByTitle(String search) {
+        String sql = "SELECT * FROM ads WHERE title LIKE ?";
+        String searchTitle = "%" + search + "%";
+
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1, search);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
     }
 }

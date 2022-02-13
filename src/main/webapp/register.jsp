@@ -11,8 +11,9 @@
     <title>User Registration Form</title>
 </head>
 <body>
+    //include jsp:
     <h1>Create User Registration</h1>
-    <form method="POST" action="/register.jsp">
+    <form method="POST" action="/register">
 
         <label for="username">UserName</label>
         <input type=" text" name="username" id="username">
@@ -23,7 +24,7 @@
         <label for="password">Password</label>
         <input type=" text" name="password" id="password">
         <br>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Register" />
     </form>
 </body>
 </html>

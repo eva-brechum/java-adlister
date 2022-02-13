@@ -30,6 +30,22 @@ public class MySQLUsersDao implements Users {
 
     public User findByUsername(String username) {
         return null;
+        //Walkthrough solution
+//        String sql = "SELECT * FROM users WHERE username = ?";
+//        User user = new User();
+//        try {
+//            PreparedStatement stmt = connection.prepareStatement(sql);
+//            stmt.setString(1, username);
+//            ResultSet rs = stmt.executeQuery();
+//            rs.next();
+//            user.setId(rs.getLong("id"));
+//            user.setUsername(rs.getString("username"));
+//            user.setEmail(rs.getString("email"));
+//            user.setPassword(rs.getString("password"));
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return user;
     }
 
     @Override
@@ -48,11 +64,12 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error creating user", e);
         }
     }
-
-    private String createInsertQuery(User user) {
-        return "INSERT INTO users(username, email, password) VALUES "
-                + "(" + user.getUsername() + ", " +
-                " " + user.getEmail() + " ' " +
-                user.getPassword() + ")";
-    }
 }
+//
+//    private String createInsertQuery(User user) {
+//        return "INSERT INTO users(username, email, password) VALUES "
+//                + "(" + user.getUsername() + ", " +
+//                " " + user.getEmail() + " ' " +
+//                user.getPassword() + ")";
+//    }
+
